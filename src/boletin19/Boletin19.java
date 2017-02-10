@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author klemavilanova
+ * @author fjavierdacostamillos
  */
 public class Boletin19 {
 
@@ -20,44 +20,50 @@ public class Boletin19 {
     public static void main(String[] args) {
         Libreria libreria1 = new Libreria();
         
-        libreria1.engadirLibro(new Libro("dfkjlf","pedro","c20",8.20,3));
-        libreria1.engadirLibro(new Libro("asjdjh","juan","c21",9,1));
-        libreria1.engadirLibro(new Libro("absjdhldkjh","ana","c22",10,0));
+        libreria1.engadirLibro(new Libro("La casa","Irene","c20",10.70,3));
+        libreria1.engadirLibro(new Libro("El sol","Paco","c21",18,1));
+        libreria1.engadirLibro(new Libro("Datos","Antonio","c22",35,0));
 
         int seg = 0;
         while(seg == 0){
-            System.out.println("Pulsa:");
-            System.out.println("A (Añadir Libro)");
-            System.out.println("B (Eliminar Libro)");
-            System.out.println("C (Amosar libros ordenados)");
-            System.out.println("D (Eliminar libros con 0 unidades)");
-            System.out.println("E (Condultar libro)");
-            System.out.println("F (Salir)");
-            String res = JOptionPane.showInputDialog("Pulse la opcion");
+            System.out.println("Pulsa (A-F):");
+            System.out.println("Engadir");
+            System.out.println("Eliminar");
+            System.out.println("Amosar ordenadamente");
+            System.out.println("Eliminar");
+            System.out.println("Consulta");
+            System.out.println("Salir");
+            String res = JOptionPane.showInputDialog("Opcion Pulsando");
             switch(res){
                 case "A":
+                case "a":    
                     String titulo = JOptionPane.showInputDialog("Titulo: ");
                     String autor = JOptionPane.showInputDialog("Autor: ");
-                    String ISBM = JOptionPane.showInputDialog("Isbm: ");
-                    double prezo = Double.parseDouble(JOptionPane.showInputDialog("Prezo: "));
+                    String ISBM = JOptionPane.showInputDialog("Isbn: ");
+                    double prezo = Double.parseDouble(JOptionPane.showInputDialog("Precio: "));
                     int unidades = Integer.parseInt(JOptionPane.showInputDialog("Unidades: "));
                     libreria1.engadirLibro(new Libro(titulo,autor,ISBM,prezo,unidades));
                     break;
                 case "B":
+                case "b":    
                     String t = JOptionPane.showInputDialog("Titulo: ");
                     libreria1.venderLibro(t);
                     break;
                 case "C":
+                case "c":
                     libreria1.ordenar();
                     break;
                 case "D":
+                case "d":    
                     libreria1.baixaLibros();
                     break;
                 case "E":
+                case "e":    
                     String cod = JOptionPane.showInputDialog("Isbm: ");
                     libreria1.consultar(cod);
                     break;
                 case "F":
+                case "f":    
                     seg = 1;
                     break;
             }

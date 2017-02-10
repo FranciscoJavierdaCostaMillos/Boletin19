@@ -22,7 +22,7 @@ public class Libreria {
     public void venderLibro(String titulo) {
         for(Libro l: ListaLibros){
             if(l.titulo.equals(titulo)){
-                System.out.println("Libro consultado:"+ l);
+                System.out.println("Datos consultados:"+ l);
             }
         }    }
     
@@ -52,7 +52,7 @@ public class Libreria {
     public void consultar(String cod){
         for(Libro l: ListaLibros){
             if(l.ISBN.equals(cod)){
-                System.out.println("Libro consultado:"+ l);
+                System.out.println("Datos consultados:"+ l);
             }
         }
     }
