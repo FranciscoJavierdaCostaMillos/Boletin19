@@ -11,7 +11,7 @@ import java.util.Comparator;
 
 /**
  *
- * @author klemavilanova
+ * @author fjavierdacostamillos
  */
 public class Libreria {
     ArrayList<Libro> ListaLibros = new ArrayList();

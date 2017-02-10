@@ -7,7 +7,7 @@ package boletin19;
 
 /**
  *
- * @author klemavilanova
+ * @author fjavierdacostamillos
  */
 public class Libro {
     public String titulo;
